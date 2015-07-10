@@ -1,83 +1,4 @@
-﻿/*
- * Copyright 2015 Dominick Baier, Brock Allen
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *   http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-function log() {
-    //var param = [].join.call(arguments);
-    //console.log(param);
-}
-
-function copy(obj, target) {
-    target = target || {};
-    for (var key in obj) {
-        if (obj.hasOwnProperty(key)) {
-            target[key] = obj[key];
-        }
-    }
-    return target;
-}
-
-function rand() {
-    return ((Date.now() + Math.random()) * Math.random()).toString().replace(".", "");
-}
-
-function error(message) {
-    return _promiseFactory.reject(Error(message));
-}
-
-function parseOidcResult(queryString) {
-    log("parseOidcResult");
-
-    queryString = queryString || location.hash;
-
-    var idx = queryString.lastIndexOf("#");
-    if (idx >= 0) {
-        queryString = queryString.substr(idx + 1);
-    }
-
-    var params = {},
-        regex = /([^&=]+)=([^&]*)/g,
-        m;
-
-    var counter = 0;
-    while (m = regex.exec(queryString)) {
-        params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
-        if (counter++ > 50) {
-            return {
-                error: "Response exceeded expected number of parameters"
-            };
-        }
-    }
-
-    for (var prop in params) {
-        return params;
-    }
-}
-
-function getJson(url, token) {
-    log("getJson", url);
-
-    var config = {};
-
-    if (token) {
-        config.headers = {"Authorization": "Bearer " + token};
-    }
-
-    return _httpRequest.getJSON(url, config);
-}
-
+﻿
 function OidcClient(settings) {
     this._settings = settings || {};
 
@@ -206,7 +127,7 @@ OidcClient.prototype.loadUserProfile = function (access_token) {
 
         return getJson(metadata.userinfo_endpoint, access_token);
     });
-}
+};
 
 OidcClient.prototype.loadAuthorizationEndpoint = function () {
     log("OidcClient.loadAuthorizationEndpoint");
