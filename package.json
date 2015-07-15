@@ -7,11 +7,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edwinf/oidc-client/oidc-client.git"
+    "url": "https://github.com/edwinf/oidc-client-node/oidc-client.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/edwinf/oidc-client/issues"
+    "url": "https://github.com/edwinf/oidc-client-node/issues"
   },
   "dependencies": {
     "bluebird": "^2.9.34",
