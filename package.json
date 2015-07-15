@@ -1,18 +1,17 @@
 {
   "name": "oidc-client",
-  "version": "0.2.1",
-  "description": "OpenID Connect (OIDC) client library",
-  "main": "oidc-client.js",
+  "version": "0.3.0",
+  "description": "OpenID Connect (OIDC) node.js library",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/IdentityModel/oidc-client.git"
+    "url": "https://github.com/edwinf/oidc-client/oidc-client.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/IdentityModel/oidc-client/issues"
+    "url": "https://github.com/edwinf/oidc-client/issues"
   },
   "dependencies": {
     "cookies": "^0.5.0",
