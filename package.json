@@ -14,11 +14,11 @@
     "url": "https://github.com/edwinf/oidc-client/issues"
   },
   "dependencies": {
+    "bluebird": "^2.9.34",
     "cookies": "^0.5.0",
     "crypto-js": "^3.1.5",
     "jsrsasign": "^4.8.3",
     "request-promise": "^0.4.2",
-    "rsvp": "^3.0.18",
     "url": "^0.10.3"
   }
 }
