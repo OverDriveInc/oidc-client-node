@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edwinf/oidc-client-node/oidc-client.git"
+    "url": "https://github.com/edwinf/oidc-client-node.git"
   },
   "license": "Apache-2.0",
   "bugs": {
