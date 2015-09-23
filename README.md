@@ -121,3 +121,37 @@ Here's an example of all the possible data in a response. What values you get ba
   "expires_in": 360
 }
 ```
+
+## Refreshing a token
+
+Refreshing a token is very similar to the other scenarios, it still requires configuration of the oidc client. The main difference is that no call-back to a route occurs.
+
+### Refresh Token Configuration Example
+
+ ```javascript
+var oidcConfig = {
+  scope: 'profile roles',
+  client_id: 'clientcreds_client',
+  client_secret: 'your_secret',
+  callbackURL: '/auth/oidc/callback',
+  authority: 'https://localhost:50000/core';
+  scopeSeparator: ' ',
+  verbose_logging: true
+};
+```
+
+### Refresh Token Request Example
+
+```javascript
+app.get('/token/refresh/', function(req, res) {
+  var oidcClient = new OidcClient(req, res, oidcConfig);
+  oidcClient.mergeRequestOptions(req, {});
+  
+  var refreshToken = getRefreshToken(); // get the current refresh token you have persisted somewhere
+  
+  oidcClient.refreshAccessTokenAsync(refreshToken).then(function (tokenResponse) {
+    handleTokenResponse(tokenResponse); // do something with the token you received
+    res.redirect('/');
+  });
+});
+```
