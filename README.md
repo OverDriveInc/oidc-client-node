@@ -3,7 +3,7 @@
 OpenID Connect (OIDC) client server side library
 
 ## Install
-`$ npm install`
+`$ npm install oidc-client-node`
 
 ## Configuration Options
 
