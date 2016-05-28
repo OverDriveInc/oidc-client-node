@@ -1,6 +1,6 @@
 {
   "name": "oidc-client-node",
-  "version": "1.0.10",
+  "version": "1.0.11-beta2",
   "description": "OpenID Connect (OIDC) node.js library",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,7 @@
     "bluebird": "^2.9.34",
     "cookies": "^0.5.0",
     "crypto-js": "^3.1.5",
-    "jsrsasign": "^4.8.3",
+    "jsrsasign": "<4.10",
     "request-promise": "^0.4.2",
     "url": "^0.10.3"
   }
