@@ -1,17 +1,17 @@
 {
-  "name": "oidc-client-node",
-  "version": "1.0.11-beta2",
-  "description": "OpenID Connect (OIDC) node.js library",
+  "name": "oidc-client-node-overdrive",
+  "version": "1.0.0",
+  "description": "OpenID Connect (OIDC) node.js library customized for Overdrive's use case",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/edwinf/oidc-client-node.git"
+    "url": "https://github.com/OverDriveInc/oidc-client-node.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/edwinf/oidc-client-node/issues"
+    "url": "https://github.com/OverDriveInc/oidc-client-node/issues"
   },
   "dependencies": {
     "bluebird": "^2.9.34",
