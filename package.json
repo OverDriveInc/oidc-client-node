@@ -1,6 +1,6 @@
 {
   "name": "oidc-client-node-overdrive",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenID Connect (OIDC) node.js library customized for Overdrive's use case",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
